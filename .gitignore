@@ -1,6 +1,4 @@
 .ipynb_checkpoints/
 .DS_Store
 __pycache__/
-note.txt
-twt.py
-data/FullFields/
+data_loc.txt
