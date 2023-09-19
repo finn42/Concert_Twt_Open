@@ -212,7 +212,7 @@ def tweet_rates(twt_set,sample_rate,smoothing_rate):
     return df_S_Acc
 
 def cevents(cdets):
-    concert_times=pd.read_csv(cdets['data_loc'] + cdets['event_file'])
+    concert_times=pd.read_csv(cdets['dep_loc'] + cdets['event_file'])
     concert_times["starttime"] = pd.to_datetime(concert_times["starttime"])+pd.Timedelta(cdets['event_offset']) # added 6 minutes, so songs begin less than a minute before the first yell tweet of recognition
     concert_times=concert_times.set_index("starttime", drop=True)
     return concert_times
